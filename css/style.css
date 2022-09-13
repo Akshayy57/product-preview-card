@@ -1,0 +1,161 @@
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+h1,
+h2,
+p,
+span,
+img {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cream);
+    padding: 26px 16px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+}
+
+.main-img {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.card-content {
+    background-color: var(--white);
+    border-radius: 0 0 10px 10px;
+}
+
+.card-content-inner {
+    padding: 27px 22px;
+}
+
+.pretitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.title {
+    color: var(--very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.description {
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.new-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    font-size: 28px;
+    margin-right: 24px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    position: relative;
+    top: -3px;
+}
+
+.card-price {
+    margin-bottom: 24px;
+}
+
+.btn {
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    height: 46px;
+    text-align: center;
+}
+
+.btn img {
+    margin-right: 10px;
+    position: relative;
+    bottom: -2px;
+}
+
+.btn:hover {
+    background-color: var(--very-dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 602px) {
+    html {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card {
+        max-width: 602px;
+        display: flex;
+        margin: 110px auto;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: inline-block;
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+    }
+
+    .card-content {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .card-content, .card-img-wrapper {
+        width: 50%;
+    }
+
+    .card-content-inner {
+        padding: 32px;
+    }
+
+    .description {
+        margin-bottom: 38px;
+    }
+}
